@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Memos on 老陳网志</title>
+    <link>http://localhost:1313/blog/memos/</link>
+    <description>Recent content in Memos on 老陳网志</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright © 2020, Jane Doe.</copyright>
+    <lastBuildDate>Sun, 09 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/memos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memos备忘录，记录瞬间想法</title>
+      <link>http://localhost:1313/memos%E5%A4%87%E5%BF%98%E5%BD%95%E8%AE%B0%E5%BD%95%E7%9E%AC%E9%97%B4%E6%83%B3%E6%B3%95/</link>
+      <pubDate>Sun, 09 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/memos%E5%A4%87%E5%BF%98%E5%BD%95%E8%AE%B0%E5%BD%95%E7%9E%AC%E9%97%B4%E6%83%B3%E6%B3%95/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/memos.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;我经常会记录一些生活上点点滴滴及吐槽自己的闲言闲语。&lt;/p&gt;&#xA;&lt;p&gt;旦又不喜欢像写博客的形式来长篇论文。我其实很懒散，不爱更新博客。&lt;/p&gt;&#xA;&lt;p&gt;之前在少数派中发现了@daibor 利用BaaS快速搭建无点赞评论版类似于微博。成功的搭建了：&lt;a href=&#34;http://bb.chenplus.com&#34;&gt;B言B语&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;最后发现@木木大佬的 &lt;a href=&#34;https://immmmm.com/bb-by-wechat-pro/&#34;&gt;「哔哔点啥」微信公众号 2.0&lt;/a&gt; 按照教程微信公众号也部署成功。&lt;/p&gt;&#xA;&lt;p&gt;因为「哔哔点啥」他的后端及微信公众号都是通过腾讯CloudBase来进行部署的。直到今年的某月分，CloudBase不再进行免费。&lt;/p&gt;&#xA;&lt;p&gt;对于我来说好不容易找到一个记录短文的平台就这么失去了。苦恼啊~😶‍🌫️&lt;/p&gt;&#xA;&lt;p&gt;嘿~他来了。 又发现一个好玩的应用。&lt;code&gt; Memos&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;一个开源的、自托管的知识库。应用UI简洁，没有太多花里胡哨的功能，非常适合日常记录各种一闪而过的想法。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

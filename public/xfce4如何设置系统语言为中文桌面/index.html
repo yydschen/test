@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
+<title>XFCE4如何设置系统语言为中文桌面 | 老陳网志</title>
+<meta name="title" content="XFCE4如何设置系统语言为中文桌面" />
+<meta name="description" content="XFCE4安装简体中文字体。" />
+<meta name="keywords" content="linux,折腾," />
+
+
+<meta property="og:url" content="http://localhost:1313/xfce4%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E7%B3%BB%E7%BB%9F%E8%AF%AD%E8%A8%80%E4%B8%BA%E4%B8%AD%E6%96%87%E6%A1%8C%E9%9D%A2/">
+  <meta property="og:site_name" content="老陳网志">
+  <meta property="og:title" content="XFCE4如何设置系统语言为中文桌面">
+  <meta property="og:description" content="XFCE4安装简体中文字体。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2023-12-21T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-12-21T00:00:00+00:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="折腾">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="XFCE4如何设置系统语言为中文桌面">
+  <meta name="twitter:description" content="XFCE4安装简体中文字体。">
+
+
+
+
+  <meta itemprop="name" content="XFCE4如何设置系统语言为中文桌面">
+  <meta itemprop="description" content="XFCE4安装简体中文字体。">
+  <meta itemprop="datePublished" content="2023-12-21T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2023-12-21T00:00:00+00:00">
+  <meta itemprop="wordCount" content="27">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+  <meta itemprop="keywords" content="Linux,折腾">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+      --width: 800px;
+      --font-main: Verdana, sans-serif;
+      --font-secondary: Verdana, sans-serif;
+      --font-scale: 1em;
+      --background-color: #faf8f1;
+      --heading-color: #222;
+      --text-color: #444;
+      --link-color: #3273dc;
+      --visited-color:  #8b6fcb;
+      --code-background-color: #f2f2f2;
+      --code-color: #222;
+      --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+      :root {
+          --background-color: #333;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #777;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+      }
+  }
+
+  body {
+      font-family: "LXGW WenKai Screen", sans-serif;
+      font-size: var(--font-scale);
+      margin: auto;
+      padding: 20px;
+      max-width: var(--width);
+      text-align: left;
+      background-color: var(--background-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.5;
+      color: var(--text-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      font-family: "LXGW WenKai Screen", sans-serif;
+      color: var(--heading-color);
+  }
+
+  a {
+      color: var(--link-color);
+      cursor: pointer;
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: underline; 
+  }
+
+  nav a {
+      margin-right: 8px;
+  }
+
+  strong, b {
+      color: var(--heading-color);
+  }
+
+  button {
+      margin: 0;
+      cursor: pointer;
+  }
+
+  main {
+      line-height: 1.6;
+  }
+
+  table {
+      width: 100%;
+  }
+
+  hr {
+      border: 0;
+      border-top: 1px dashed;
+  }
+
+  img {
+      max-width: 100%;
+  }
+
+  code {
+      font-family: monospace;
+      padding: 2px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 3px;
+  }
+
+  blockquote {
+      border-left: 1px solid #999;
+      color: var(--code-color);
+      padding-left: 20px;
+      font-style: italic;
+  }
+
+  footer {
+      padding: 25px 0;
+      text-align: center;
+  }
+
+  .title:hover {
+      text-decoration: none;
+  }
+
+  .title h1 {
+      font-size: 1.5em;
+  }
+
+  .inline {
+      width: auto !important;
+  }
+
+  .highlight, .code {
+      padding: 1px 15px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 3px;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+      list-style-type: none;
+      padding: unset;
+  }
+
+  ul.blog-posts li {
+      display: flex;
+  }
+
+  ul.blog-posts li span {
+      flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+      color: var(--visited-color);
+  }
+</style>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>老陳网志</h2>
+</a>
+<nav><a href="/">Home</a>
+
+<a href="/blog">Blog</a>
+
+
+<a href="/about/">About</a>
+
+<a href="/bear/">Bear</a>
+
+<a href="/hugo/">Hugo</a>
+
+
+</nav>
+</header>
+  <main>
+
+<h1>XFCE4如何设置系统语言为中文桌面</h1>
+<p>
+  <i>
+    <time datetime='2023-12-21'>
+      21 Dec, 2023
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>要在XFCE4中安装简体中文字体并将系统语言设置为中文桌面，您可以按照以下步骤操作：</p>
+<p>首先，打开终端。</p>
+<ol>
+<li>安装简体中文字体：
+在终端中输入以下命令并按回车键来安装中文字体：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>sudo apt-get install fonts-wqy-zenhei
+</span></span></code></pre></div><ol start="2">
+<li>设置系统语言为中文桌面：
+在终端中输入以下命令并按回车键打开语言选择窗口：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>sudo dpkg-reconfigure locales
+</span></span></code></pre></div><p>在弹出的窗口中，选择您需要的语言（例如，zh_CN.UTF-8 UTF-8）并按回车键确认。</p>
+<p>然后选择默认的语言并按回车键确认。</p>
+<p>最后，选择是否使用默认的语言环境变量并按回车键确认。</p>
+<ol start="3">
+<li>重新启动系统：
+在终端中输入以下命令并按回车键来重新启动系统：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>sudo reboot
+</span></span></code></pre></div><ol start="4">
+<li>
+<p>登录到XFCE4桌面后，右键单击桌面并选择&quot;设置&quot;。</p>
+</li>
+<li>
+<p>在&quot;设置&quot;窗口中，找到&quot;外观&quot;或&quot;外观设置&quot;选项，并单击打开。</p>
+</li>
+<li>
+<p>在&quot;外观&quot;窗口中，选择&quot;字体&quot;选项。</p>
+</li>
+<li>
+<p>在字体选项卡下选择您所安装的简体中文字体。</p>
+</li>
+<li>
+<p>关闭设置窗口，并重新启动XFCE4界面。</p>
+</li>
+</ol>
+<p>现在，您的XFCE4系统应该已经安装了简体中文字体并将系统语言设置为中文桌面。</p>
+</content>
+<p>
+  
+  <a href="http://localhost:1313/blog/linux/">#Linux</a>
+  
+  <a href="http://localhost:1313/blog/%E6%8A%98%E8%85%BE/">#折腾</a>
+  
+</p>
+<div style="padding:20px 0"></div>
+<div id="Comments"></div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.1/Artalk.css" rel="stylesheet">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.1/Artalk.js"></script>
+
+<script>
+   Artalk.init({
+    el:        '#Comments',              
+    pageKey:   '',                
+    pageTitle: '', 
+    server:    'https://artalk.chenyyds.com',  
+    site:      '老陳网志',           
+  })
+</script>
+
+  </main>
+  <footer><div>© 2023 老陳网志 . <a href="https://beian.miit.gov.cn/">渝ICP备18007511号</a> </div>
+</footer>
+
+    
+</body>
+
+</html>

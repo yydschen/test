@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Text on 老陳网志</title>
+    <link>http://localhost:1313/blog/text/</link>
+    <description>Recent content in Text on 老陳网志</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright © 2020, Jane Doe.</copyright>
+    <lastBuildDate>Mon, 16 Mar 2020 11:25:05 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/text/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>快速搭建Hugo博客</title>
+      <link>http://localhost:1313/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Mon, 16 Mar 2020 11:25:05 -0500</pubDate>
+      <guid>http://localhost:1313/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/hugo-blog.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;一直以来用了这么多年的&lt;a href=&#34;https://www.lianbaer.com/&#34;&gt;Wordpress&lt;/a&gt;，最近心血来潮，想要重新折腾一番自己的博客。于是想用Hugo搭建。&lt;/p&gt;&#xA;&lt;p&gt;Hugo 是目前比较流行的Go编写的静态网站生成器，速度快，易用，可配置，相比Hexo来说操作更为简单。&lt;/p&gt;&#xA;&lt;p&gt;Hugo 有一个内容和模板目录，把他们渲染到完全的 HTML 网站。可以参照&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;Hugo官网&lt;/a&gt; 搭建自己个人博客。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

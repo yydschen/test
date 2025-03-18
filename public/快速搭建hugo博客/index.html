@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
+<title>快速搭建Hugo博客 | 老陳网志</title>
+<meta name="title" content="快速搭建Hugo博客" />
+<meta name="description" content="搭建Go编写的静态网站生成器" />
+<meta name="keywords" content="blog,text,Hugo," />
+
+
+<meta property="og:url" content="http://localhost:1313/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAhugo%E5%8D%9A%E5%AE%A2/">
+  <meta property="og:site_name" content="老陳网志">
+  <meta property="og:title" content="快速搭建Hugo博客">
+  <meta property="og:description" content="搭建Go编写的静态网站生成器">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2020-03-16T11:25:05-05:00">
+    <meta property="article:modified_time" content="2020-03-16T11:25:05-05:00">
+    <meta property="article:tag" content="Blog">
+    <meta property="article:tag" content="Text">
+    <meta property="article:tag" content="Hugo">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="快速搭建Hugo博客">
+  <meta name="twitter:description" content="搭建Go编写的静态网站生成器">
+
+
+
+
+  <meta itemprop="name" content="快速搭建Hugo博客">
+  <meta itemprop="description" content="搭建Go编写的静态网站生成器">
+  <meta itemprop="datePublished" content="2020-03-16T11:25:05-05:00">
+  <meta itemprop="dateModified" content="2020-03-16T11:25:05-05:00">
+  <meta itemprop="wordCount" content="218">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+  <meta itemprop="keywords" content="Blog,Text,Hugo">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+      --width: 800px;
+      --font-main: Verdana, sans-serif;
+      --font-secondary: Verdana, sans-serif;
+      --font-scale: 1em;
+      --background-color: #faf8f1;
+      --heading-color: #222;
+      --text-color: #444;
+      --link-color: #3273dc;
+      --visited-color:  #8b6fcb;
+      --code-background-color: #f2f2f2;
+      --code-color: #222;
+      --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+      :root {
+          --background-color: #333;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #777;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+      }
+  }
+
+  body {
+      font-family: "LXGW WenKai Screen", sans-serif;
+      font-size: var(--font-scale);
+      margin: auto;
+      padding: 20px;
+      max-width: var(--width);
+      text-align: left;
+      background-color: var(--background-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.5;
+      color: var(--text-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      font-family: "LXGW WenKai Screen", sans-serif;
+      color: var(--heading-color);
+  }
+
+  a {
+      color: var(--link-color);
+      cursor: pointer;
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: underline; 
+  }
+
+  nav a {
+      margin-right: 8px;
+  }
+
+  strong, b {
+      color: var(--heading-color);
+  }
+
+  button {
+      margin: 0;
+      cursor: pointer;
+  }
+
+  main {
+      line-height: 1.6;
+  }
+
+  table {
+      width: 100%;
+  }
+
+  hr {
+      border: 0;
+      border-top: 1px dashed;
+  }
+
+  img {
+      max-width: 100%;
+  }
+
+  code {
+      font-family: monospace;
+      padding: 2px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 3px;
+  }
+
+  blockquote {
+      border-left: 1px solid #999;
+      color: var(--code-color);
+      padding-left: 20px;
+      font-style: italic;
+  }
+
+  footer {
+      padding: 25px 0;
+      text-align: center;
+  }
+
+  .title:hover {
+      text-decoration: none;
+  }
+
+  .title h1 {
+      font-size: 1.5em;
+  }
+
+  .inline {
+      width: auto !important;
+  }
+
+  .highlight, .code {
+      padding: 1px 15px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 3px;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+      list-style-type: none;
+      padding: unset;
+  }
+
+  ul.blog-posts li {
+      display: flex;
+  }
+
+  ul.blog-posts li span {
+      flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+      color: var(--visited-color);
+  }
+</style>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>老陳网志</h2>
+</a>
+<nav><a href="/">Home</a>
+
+<a href="/blog">Blog</a>
+
+
+<a href="/about/">About</a>
+
+<a href="/bear/">Bear</a>
+
+<a href="/hugo/">Hugo</a>
+
+
+</nav>
+</header>
+  <main>
+
+<h1>快速搭建Hugo博客</h1>
+<p>
+  <i>
+    <time datetime='2020-03-16'>
+      16 Mar, 2020
+    </time>
+  </i>
+</p>
+
+<content>
+  <p><img src="/images/hugo-blog.png" alt=""></p>
+<h2 id="前言">前言</h2>
+<p>一直以来用了这么多年的<a href="https://www.lianbaer.com/">Wordpress</a>，最近心血来潮，想要重新折腾一番自己的博客。于是想用Hugo搭建。</p>
+<p>Hugo 是目前比较流行的Go编写的静态网站生成器，速度快，易用，可配置，相比Hexo来说操作更为简单。</p>
+<p>Hugo 有一个内容和模板目录，把他们渲染到完全的 HTML 网站。可以参照<a href="https://gohugo.io/getting-started/quick-start/">Hugo官网</a> 搭建自己个人博客。</p>
+<h2 id="下载安装hugo">下载、安装Hugo</h2>
+<p>这里MAC用户和Windows用户的操作是不同的。</p>
+<ul>
+<li>MAC用户</li>
+</ul>
+<p>在控制台依次输入<code>$ brew install hugo、$ hugo version</code> 就可以下载下来了。</p>
+<ul>
+<li>Windows用户</li>
+</ul>
+<ol>
+<li>下载地址：<a href="https://github.com/spf13/hugo/releases">https://github.com/spf13/hugo/releases</a>。</li>
+</ol>
+<p>根据自己的操作系统，下载对应的安装包。我的操作系统是Win10 64bit， 选择了<code>hugo_0.69.2_Windows-64bit.zip</code>。</p>
+<ol start="2">
+<li>
+<p>解压后只需要把文件夹中hugo.exe文件单独拿出来，放到你预先建立的文件夹里，如你在D盘的software文件夹中建了一个名为hugo的文件夹，则你最后得到的地址为D:\Software\hugo\hugo.exe</p>
+</li>
+<li>
+<p>把D:\Software\hugo\加到环境变量的PATH中，这一步很关键</p>
+</li>
+<li>
+<p>重启终端，运行<code>hugo version</code>查看版本.</p>
+</li>
+</ol>
+<p>完成以上步骤后，打开命令行输入 <code>hugo help</code></p>
+<p>如果得到如下信息，说明安装成功。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>hugo is the main command, used to build your Hugo site.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Hugo is a Fast and Flexible Static Site Generator
+</span></span><span style="display:flex;"><span>built with love by spf13 and friends in Go.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Complete documentation is available at http://gohugo.io/.
+</span></span></code></pre></div><h2 id="创建一个hugo站点">创建一个Hugo站点</h2>
+<p>新建自己博客站点,这里的Blog可以改为你自己设的名称</p>
+<p><code>hugo new site Blog</code></p>
+<p>得到如下提示创建成功的信息</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmd" data-lang="cmd"><span style="display:flex;"><span>Congratulations! Your new Hugo site is created in E:\blog.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Just a few more steps and you&#39;re ready to go:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. Download a theme into the same-named folder.
+</span></span><span style="display:flex;"><span>Choose a theme from https://themes.gohugo.io/, or
+</span></span><span style="display:flex;"><span>create your own with the <span style="color:#e6db74">&#34;hugo new theme &lt;THEMENAME&gt;&#34;</span> command.
+</span></span><span style="display:flex;"><span>2. Perhaps you want to add some content. You can add single files
+</span></span><span style="display:flex;"><span>with <span style="color:#e6db74">&#34;hugo new &lt;SECTIONNAME&gt;\&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;</span>.
+</span></span><span style="display:flex;"><span>3. Start the built-in live server via <span style="color:#e6db74">&#34;hugo server&#34;</span>.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Visit https://gohugo.io/ for quickstart guide and full documentation.
+</span></span></code></pre></div><p>进入该目录，可以看到自动生成了5个目录和一个配置文件config.toml</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>|<span style="color:#f92672">--</span> <span style="color:#a6e22e">archetypes</span>
+</span></span><span style="display:flex;"><span>|<span style="color:#f92672">--</span> <span style="color:#a6e22e">content</span>   <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">存放内容的目录</span>
+</span></span><span style="display:flex;"><span>|<span style="color:#f92672">--</span> <span style="color:#a6e22e">data</span>      
+</span></span><span style="display:flex;"><span>|<span style="color:#f92672">--</span> <span style="color:#a6e22e">layouts</span>   
+</span></span><span style="display:flex;"><span>|<span style="color:#f92672">--</span> <span style="color:#a6e22e">static</span>    <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">存放静态资源</span><span style="color:#960050;background-color:#1e0010">（</span><span style="color:#a6e22e">图片</span>,<span style="color:#a6e22e">css</span>,<span style="color:#a6e22e">js</span><span style="color:#960050;background-color:#1e0010">）</span>
+</span></span><span style="display:flex;"><span>|<span style="color:#f92672">--</span> <span style="color:#a6e22e">themes</span>    <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">存放主题</span>
+</span></span><span style="display:flex;"><span>|<span style="color:#f92672">--</span> <span style="color:#a6e22e">config</span>.<span style="color:#a6e22e">toml</span>  <span style="color:#960050;background-color:#1e0010">#</span><span style="color:#a6e22e">配置文件</span>
+</span></span></code></pre></div><h2 id="添加主题">添加主题</h2>
+<p>添加主题，可以是默认的，也可以是别的主题，这里演示默认的主题，输入下面两行代码</p>
+<p><code>git init</code></p>
+<p><code>git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke</code></p>
+<p>然后从站点的根目录更新git存储库：</p>
+<p><code>git submodule update --remote --merge</code></p>
+<p>然后把默认主题名称添加到配置中，打开config.toml文件进行修改.</p>
+<h2 id="新建文章内容">新建文章内容</h2>
+<p>新建一个markdown文件，完成博客内容</p>
+<p>切换到该目录下，然后输入如下命令，会在content的目录下创建post目录，在post目录下创建名为test.md的文件。</p>
+<p><code>cd blog </code></p>
+<p><code> hugo new post/test.md</code></p>
+<p>这个时候默认在posts文件夹下生成了你的第一个博客，现在修改标题，draft改为true，内容可以随意编辑，比如</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Markdown" data-lang="Markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>  title: &#34;Hello world!&#34;
+</span></span><span style="display:flex;"><span>  date: 2020-03-16T11:47:15+08:00
+</span></span><span style="display:flex;"><span>  draft: true
+</span></span><span style="display:flex;"><span> ---
+</span></span><span style="display:flex;"><span> ## 大家好
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>  这是我的博客，希望能写一些好的文章分享给大家~~~
+</span></span></code></pre></div><p>接着输入如下代码，可以预览你的博客</p>
+<p><code>hugo server -D</code></p>
+<p>建立静态页面，这里会生成一个public目录，这个目录实际上就是一个网站，我们只需输入如下代码</p>
+<p><code>hugo -D</code></p>
+<p>把最新的public目录上传到仓库（GitHub，Coding，码云）</p>
+<p><strong>好了这样就大功告成</strong>    🎉🎉🎉</p>
+<blockquote>
+<p>这是我自己搭建好的博客网站：<a href="https://blog.chenplus.com/">blog.chenplus.com</a></p></blockquote>
+</content>
+<p>
+  
+  <a href="http://localhost:1313/blog/blog/">#Blog</a>
+  
+  <a href="http://localhost:1313/blog/text/">#Text</a>
+  
+  <a href="http://localhost:1313/blog/hugo/">#Hugo</a>
+  
+</p>
+<div style="padding:20px 0"></div>
+<div id="Comments"></div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.1/Artalk.css" rel="stylesheet">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.1/Artalk.js"></script>
+
+<script>
+   Artalk.init({
+    el:        '#Comments',              
+    pageKey:   '',                
+    pageTitle: '', 
+    server:    'https://artalk.chenyyds.com',  
+    site:      '老陳网志',           
+  })
+</script>
+
+  </main>
+  <footer><div>© 2023 老陳网志 . <a href="https://beian.miit.gov.cn/">渝ICP备18007511号</a> </div>
+</footer>
+
+    
+</body>
+
+</html>

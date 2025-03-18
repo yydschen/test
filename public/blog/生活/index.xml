@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>生活 on 老陳网志</title>
+    <link>http://localhost:1313/blog/%E7%94%9F%E6%B4%BB/</link>
+    <description>Recent content in 生活 on 老陳网志</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright © 2020, Jane Doe.</copyright>
+    <lastBuildDate>Wed, 24 Jun 2020 13:53:46 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/%E7%94%9F%E6%B4%BB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>端午节</title>
+      <link>http://localhost:1313/%E7%AB%AF%E5%8D%88%E8%8A%82/</link>
+      <pubDate>Wed, 24 Jun 2020 13:53:46 +0000</pubDate>
+      <guid>http://localhost:1313/%E7%AB%AF%E5%8D%88%E8%8A%82/</guid>
+      <description>&lt;p&gt;端午临中夏，时清日复长.&lt;/p&gt;&#xA;&lt;p&gt;每年农历五月初五是中国人的传统佳节——端午节。🐉&lt;/p&gt;&#xA;&lt;p&gt;门插艾，香满堂，吃粽子，撒白糖，而在吃货们的眼中。&lt;/p&gt;&#xA;&lt;p&gt;不以食物为代表的节日，都是“耍流氓”&lt;/p&gt;&#xA;&lt;p&gt;小时候妈妈会早几天就开始包粽子.&lt;/p&gt;&#xA;&lt;p&gt;爷爷都给我们准备雄黄酒以迎接端午节。&lt;/p&gt;&#xA;&lt;p&gt;然后串门外婆家去大吃几顿，粽意深情.&lt;/p&gt;&#xA;&lt;p&gt;浓浓的粽香，撞上深沉的爱。注定是爱意满满，幸福多多。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hello world!</title>
+      <link>http://localhost:1313/hello-world/</link>
+      <pubDate>Sun, 15 Dec 2019 11:25:05 +0000</pubDate>
+      <guid>http://localhost:1313/hello-world/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/hello-world.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;你好世界，愿这里成为你的一片净土。&lt;/p&gt;&#xA;&lt;p&gt;欢迎使用Hugo，这是您的第一篇文章。编辑或删除它，然后开始写作吧！&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

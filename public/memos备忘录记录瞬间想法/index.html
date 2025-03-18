@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="http://localhost:1313/images/favicon.png" />
+<title>Memos备忘录，记录瞬间想法 | 老陳网志</title>
+<meta name="title" content="Memos备忘录，记录瞬间想法" />
+<meta name="description" content="搭建一个碎片化知识卡片管理工具——Memos" />
+<meta name="keywords" content="吐槽,微博,memos,说说," />
+
+
+<meta property="og:url" content="http://localhost:1313/memos%E5%A4%87%E5%BF%98%E5%BD%95%E8%AE%B0%E5%BD%95%E7%9E%AC%E9%97%B4%E6%83%B3%E6%B3%95/">
+  <meta property="og:site_name" content="老陳网志">
+  <meta property="og:title" content="Memos备忘录，记录瞬间想法">
+  <meta property="og:description" content="搭建一个碎片化知识卡片管理工具——Memos">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2022-10-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2022-10-09T00:00:00+00:00">
+    <meta property="article:tag" content="吐槽">
+    <meta property="article:tag" content="微博">
+    <meta property="article:tag" content="Memos">
+    <meta property="article:tag" content="说说">
+    <meta property="og:image" content="http://localhost:1313/images/share.png">
+
+
+
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/share.png">
+  <meta name="twitter:title" content="Memos备忘录，记录瞬间想法">
+  <meta name="twitter:description" content="搭建一个碎片化知识卡片管理工具——Memos">
+
+
+
+
+  <meta itemprop="name" content="Memos备忘录，记录瞬间想法">
+  <meta itemprop="description" content="搭建一个碎片化知识卡片管理工具——Memos">
+  <meta itemprop="datePublished" content="2022-10-09T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2022-10-09T00:00:00+00:00">
+  <meta itemprop="wordCount" content="141">
+  <meta itemprop="image" content="http://localhost:1313/images/share.png">
+  <meta itemprop="keywords" content="吐槽,微博,Memos,说说">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+      --width: 800px;
+      --font-main: Verdana, sans-serif;
+      --font-secondary: Verdana, sans-serif;
+      --font-scale: 1em;
+      --background-color: #faf8f1;
+      --heading-color: #222;
+      --text-color: #444;
+      --link-color: #3273dc;
+      --visited-color:  #8b6fcb;
+      --code-background-color: #f2f2f2;
+      --code-color: #222;
+      --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+      :root {
+          --background-color: #333;
+          --heading-color: #eee;
+          --text-color: #ddd;
+          --link-color: #8cc2dd;
+          --visited-color:  #8b6fcb;
+          --code-background-color: #777;
+          --code-color: #ddd;
+          --blockquote-color: #ccc;
+      }
+  }
+
+  body {
+      font-family: "LXGW WenKai Screen", sans-serif;
+      font-size: var(--font-scale);
+      margin: auto;
+      padding: 20px;
+      max-width: var(--width);
+      text-align: left;
+      background-color: var(--background-color);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      line-height: 1.5;
+      color: var(--text-color);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      font-family: "LXGW WenKai Screen", sans-serif;
+      color: var(--heading-color);
+  }
+
+  a {
+      color: var(--link-color);
+      cursor: pointer;
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: underline; 
+  }
+
+  nav a {
+      margin-right: 8px;
+  }
+
+  strong, b {
+      color: var(--heading-color);
+  }
+
+  button {
+      margin: 0;
+      cursor: pointer;
+  }
+
+  main {
+      line-height: 1.6;
+  }
+
+  table {
+      width: 100%;
+  }
+
+  hr {
+      border: 0;
+      border-top: 1px dashed;
+  }
+
+  img {
+      max-width: 100%;
+  }
+
+  code {
+      font-family: monospace;
+      padding: 2px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 3px;
+  }
+
+  blockquote {
+      border-left: 1px solid #999;
+      color: var(--code-color);
+      padding-left: 20px;
+      font-style: italic;
+  }
+
+  footer {
+      padding: 25px 0;
+      text-align: center;
+  }
+
+  .title:hover {
+      text-decoration: none;
+  }
+
+  .title h1 {
+      font-size: 1.5em;
+  }
+
+  .inline {
+      width: auto !important;
+  }
+
+  .highlight, .code {
+      padding: 1px 15px;
+      background-color: var(--code-background-color);
+      color: var(--code-color);
+      border-radius: 3px;
+      margin-block-start: 1em;
+      margin-block-end: 1em;
+      overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+      list-style-type: none;
+      padding: unset;
+  }
+
+  ul.blog-posts li {
+      display: flex;
+  }
+
+  ul.blog-posts li span {
+      flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+      color: var(--visited-color);
+  }
+</style>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" media="print" onload="this.media='all'">
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>老陳网志</h2>
+</a>
+<nav><a href="/">Home</a>
+
+<a href="/blog">Blog</a>
+
+
+<a href="/about/">About</a>
+
+<a href="/bear/">Bear</a>
+
+<a href="/hugo/">Hugo</a>
+
+
+</nav>
+</header>
+  <main>
+
+<h1>Memos备忘录，记录瞬间想法</h1>
+<p>
+  <i>
+    <time datetime='2022-10-09'>
+      09 Oct, 2022
+    </time>
+  </i>
+</p>
+
+<content>
+  <p><img src="/images/memos.png" alt=""></p>
+<h2 id="前言">前言</h2>
+<p>我经常会记录一些生活上点点滴滴及吐槽自己的闲言闲语。</p>
+<p>旦又不喜欢像写博客的形式来长篇论文。我其实很懒散，不爱更新博客。</p>
+<p>之前在少数派中发现了@daibor 利用BaaS快速搭建无点赞评论版类似于微博。成功的搭建了：<a href="http://bb.chenplus.com">B言B语</a></p>
+<p>最后发现@木木大佬的 <a href="https://immmmm.com/bb-by-wechat-pro/">「哔哔点啥」微信公众号 2.0</a> 按照教程微信公众号也部署成功。</p>
+<p>因为「哔哔点啥」他的后端及微信公众号都是通过腾讯CloudBase来进行部署的。直到今年的某月分，CloudBase不再进行免费。</p>
+<p>对于我来说好不容易找到一个记录短文的平台就这么失去了。苦恼啊~😶‍🌫️</p>
+<p>嘿~他来了。 又发现一个好玩的应用。<code> Memos</code></p>
+<p>一个开源的、自托管的知识库。应用UI简洁，没有太多花里胡哨的功能，非常适合日常记录各种一闪而过的想法。</p>
+<h2 id="介绍">介绍</h2>
+<p>1.1 有啥用？</p>
+<ul>
+<li>📅 方便记录每日 / 周计划</li>
+<li>💡 方便记录一些奇思妙想</li>
+<li>📕 可以随手写写读后感</li>
+<li>🏗️有时候可以代替在微信上经常使用的“文件传输助手”、手机的备忘录</li>
+<li>📒 可以打造一个属于自己的轻量化“卡片”笔记簿</li>
+</ul>
+<p>1.2 有啥特点？</p>
+<ul>
+<li>✨ 免费、开源项目！</li>
+<li>😋 颜值高！UI非常的大气、漂亮！</li>
+<li>📑 交互逻辑体验优秀！</li>
+<li>👫 支持中文！支持多用户！</li>
+<li>⚡ 支持Docker快速部署！</li>
+<li>🚀 目前正在全力开发中，之后会有更多功能……</li>
+</ul>
+<p>相关地址</p>
+<p>官方Demo：<a href="https://demo.usememos.com/">https://demo.usememos.com/</a></p>
+<p>GitHub地址：<a href="https://github.com/usememos/memos">https://github.com/usememos/memos</a></p>
+<h2 id="部署">部署</h2>
+<p>使用 Docker 部署创建并启动容器，镜像里包含所需的所有环境。只需自行 pull + run，即可完成部署。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>docker run \
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--</span>name memos \
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--</span>publish <span style="color:#ae81ff">5230</span><span style="color:#f92672">:</span><span style="color:#ae81ff">5230</span> \
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--</span>volume <span style="color:#f92672">~/</span>.memos<span style="color:#f92672">/:/</span>var<span style="color:#f92672">/</span>opt<span style="color:#f92672">/</span>memos \
+</span></span><span style="display:flex;"><span>  neosmemo<span style="color:#f92672">/</span>memos:latest \
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--</span>mode prod \
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">--</span>port <span style="color:#ae81ff">5230</span>
+</span></span><span style="display:flex;"><span>  
+</span></span></code></pre></div><h4 id="docker-compose">Docker Compose</h4>
+<p>在示例<a href="https://github.com/usememos/memos/blob/main/docker-compose.yaml/">docker-compose.yaml</a> 文件中查看更多信息。</p>
+<p>通过访问 localhost:5230 即可打开 Memos，首次安装会提示注册用户，请记牢您的而密码。数据文件默认存储在 ~/.memos 中。</p>
+<p>如果~/.memos/没有memos_prod.db文件，则memos将自动生成它。</p>
+<h2 id="单页部署代码">单页部署代码</h2>
+<p>@<a href="https://immmmm.com/bb-by-memos/">木木大佬</a> 已做 js 文件调用处理，找个页面丢入以下 html + js + css 即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>&lt;<span style="color:#a6e22e">div</span> <span style="color:#a6e22e">id</span>=<span style="color:#e6db74">&#34;bber&#34;</span>&gt;&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#a6e22e">script</span> <span style="color:#66d9ef">type</span>=<span style="color:#e6db74">&#34;text/javascript&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">bbMemos</span> = {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">memos</span> : <span style="color:#960050;background-color:#1e0010">&#39;</span><span style="color:#a6e22e">https</span>:<span style="color:#75715e">//me.edui.fun/&#39;,//修改为自己的 apiurl，末尾有 / 斜杠</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">limit</span> : <span style="color:#960050;background-color:#1e0010">&#39;&#39;</span>,<span style="color:#75715e">//默认每次显示 10条 </span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">creatorId</span>:<span style="color:#960050;background-color:#1e0010">&#39;&#39;</span> ,<span style="color:#75715e">//默认为 101用户 https://demo.usememos.com/u/101</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">domId</span>: <span style="color:#960050;background-color:#1e0010">&#39;&#39;</span>,<span style="color:#75715e">//默认为 &lt;div id=&#34;bber&#34;&gt;&lt;/div&gt;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span>=<span style="color:#e6db74">&#34;https://immmmm.com/bb-lmm.js&#34;</span>&gt;&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span>=<span style="color:#e6db74">&#34;https://fastly.jsdelivr.net/gh/Tokinx/ViewImage/view-image.min.js&#34;</span>&gt;&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">script</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#a6e22e">script</span> <span style="color:#a6e22e">src</span>=<span style="color:#e6db74">&#34;https://fastly.jsdelivr.net/gh/Tokinx/Lately/lately.min.js&#34;</span>&gt;&lt;<span style="color:#f92672">/</span><span style="color:#a6e22e">script</span>&gt;
+</span></span></code></pre></div><p>样式代码还在持续更新中，所以详见源码。</p>
+<p>B言B语：<a href="https://chenyyds.com/bb">https://chenyyds.com/bb</a></p>
+<h2 id="扩展插件">扩展插件</h2>
+<p>Memos已经被@木木大佬玩出花样来了，新增浏览器扩展插件快捷发布内容。</p>
+<p><img src="/images/browser.png" alt=""></p>
+<p>项目地址：<a href="https://github.com/lmm214/memos-bber">https://github.com/lmm214/memos-bber</a></p>
+<p>苹果iOS端可以：<a href="https://testflight.apple.com/join/YVHheZ50">MoeMemos IOS</a> 快捷指令发布</p>
+<p>由<a href="https://rabithua.club/">rabithua</a> 搭建的微信小程序版<a href="https://github.com/Rabithua/memos_wmp">麦墨</a> 可以发布哔哔.也可以自行搭建。</p>
+<p><strong>总之Memos非常不错。又可以畅所欲为了。</strong>  😎</p>
+</content>
+<p>
+  
+  <a href="http://localhost:1313/blog/%E5%90%90%E6%A7%BD/">#吐槽</a>
+  
+  <a href="http://localhost:1313/blog/%E5%BE%AE%E5%8D%9A/">#微博</a>
+  
+  <a href="http://localhost:1313/blog/memos/">#Memos</a>
+  
+  <a href="http://localhost:1313/blog/%E8%AF%B4%E8%AF%B4/">#说说</a>
+  
+</p>
+<div style="padding:20px 0"></div>
+<div id="Comments"></div>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.1/Artalk.css" rel="stylesheet">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/artalk/2.9.1/Artalk.js"></script>
+
+<script>
+   Artalk.init({
+    el:        '#Comments',              
+    pageKey:   '',                
+    pageTitle: '', 
+    server:    'https://artalk.chenyyds.com',  
+    site:      '老陳网志',           
+  })
+</script>
+
+  </main>
+  <footer><div>© 2023 老陳网志 . <a href="https://beian.miit.gov.cn/">渝ICP备18007511号</a> </div>
+</footer>
+
+    
+</body>
+
+</html>

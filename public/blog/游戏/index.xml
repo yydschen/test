@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>游戏 on 老陳网志</title>
+    <link>http://localhost:1313/blog/%E6%B8%B8%E6%88%8F/</link>
+    <description>Recent content in 游戏 on 老陳网志</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright © 2020, Jane Doe.</copyright>
+    <lastBuildDate>Tue, 24 Jan 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/%E6%B8%B8%E6%88%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>再见了WOW</title>
+      <link>http://localhost:1313/%E5%86%8D%E8%A7%81%E4%BA%86wow/</link>
+      <pubDate>Tue, 24 Jan 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/%E5%86%8D%E8%A7%81%E4%BA%86wow/</guid>
+      <description>&lt;p&gt;2023年1月24日0时起，又要停服了，不知道这一次会是多久?还有多少人记得当年?&lt;/p&gt;&#xA;&lt;p&gt;我走07都开始玩游戏，那个时候我刚好在上海网吧当网管，没事整天打魔兽,那时魔兽世界网吧也是最热门的游戏之一。&lt;/p&gt;&#xA;&lt;p&gt;我和我朋友们还组成了自己的公会，还经常开方打副本,有时候甚至通宵。&#xA;想想都刺激~我还在游戏中认识了很多盟友，经常一起去偷金币刷声望做完任务，想想都开心。&lt;/p&gt;&#xA;&lt;p&gt;走九城玩到网易，现在已成了青春的回忆。既然玩不了WOW了，那就好好告个别吧~&#xA;再见了我的艾泽拉斯，再见了我的盟友们。👋 魔兽世界&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
