@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ .Content }}
+<section>
+    <span style="font-weight:800">
+    <div class="home-title">Essays / 文章</div></span></h3>
+    {{ $pages := .Site.RegularPages }}
+    {{ $paginator := .Paginate ($pages) }}
+    {{ $count := 0 }}
+    {{ range $paginator.Pages }}
+    {{ $title := .Title }}
+    {{ $summary := .Summary }}
+    {{ if and (not (in .Params.categories "weekly")) (lt $count 10) }}
+    {{ $count = add $count 1 }}
+    <div class="posts-item">
+    <time class="date">{{ .Date.Format "2006-01-02"}}</time> &nbsp;
+    <a href="{{ .RelPermalink }}" class="title">{{ .Title }}</a>
+    </div>
+    {{ end }}
+    {{ end }}
+    </article>
+
+{{ end }}
